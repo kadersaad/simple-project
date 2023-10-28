@@ -20,7 +20,8 @@
 
     - name: Push Image to dockerhub
       command: docker push kadersaad/comingsoon-page
-
+      ignore_errors: yes
+      
     - name: run container
       command: docker run -d --name web-container -p 5000:80 kadersaad/comingsoon-page
 
